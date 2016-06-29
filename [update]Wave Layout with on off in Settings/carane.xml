@@ -1,0 +1,55 @@
+#GUIDE Wave with on/off on settings
+
+======================= Step 1 ========================================
+--> DC settings.apk
+--> tambahkan
+    <Preference android:title="Wave Layout On Expanded">
+        <intent android:targetPackage="com.android.systemui" android:action="android.intent.action.VIEW" android:targetClass="com.dhian.wave.Settings" />
+    </Preference>
+	di res/xml/display_settings.xml atau terserah mau di xml mana
+	
+--> RC Sign push
+======================== Step 2 =================================
+--> DC systemUI.apk
+--> copy bahan ketempat masing2
+
+--> buka gemini_status_bar_expanded.xml
+--> tambahkan scrip ini
+    <com.dhian.wave.WaveView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+
+	atau di atas 
+</com.android.systemui.statusbar.phone.NotificationPanelView>
+
+--> tambahkan scrip di bawah di androidManifest.xml
+
+        
+        <activity android:icon="@drawable/imot" android:name="com.dhian.wave.Settings"/>
+	di atas
+    </application>
+</manifest>
+
+--> rc dan dc kembali..
+
+--> buka Settings.smali com/dhian/wave/Settings.smali
+	--> dan buka juga public.xml
+
+	--> cari id ini di Settings.smali
+
+    0x7f050000 ganti dengan id public yg ini dari public.xml ente    <public type="xml" name="imot_settings" id="0x7f050000" />
+    0x7f030035 ganti dengan id public yg ini dari public.xml ente    <public type="layout" name="view_settings" id="0x7f030035" />
+    0x7f0c0090 ganti dengan id public yg ini dari public.xml ente    <public type="id" name="imot_wv" id="0x7f0c0090" />
+
+--> save rc sigh in ..
+
+
+
+	
+
+Credit:
+dhian rusdhiana
+
+Thanks to:
+ciben doank	
+
+Guide ini ditulis oleh:
+Muhamad Sa'id Ab (Kang Zayd)

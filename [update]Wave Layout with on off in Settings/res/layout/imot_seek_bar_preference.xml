@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@android:id/widget_frame" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="normal" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textSize="15.0dip" android:gravity="right" android:id="@+id/seekBarPrefValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:id="@+id/seekBarPrefBarContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/seekBarPrefValue" android:layout_below="@android:id/title" android:layout_centerVertical="true" />
+</RelativeLayout>
